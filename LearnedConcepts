@@ -1,0 +1,1479 @@
+Writing down all the things I learned 
+-duplicate sheets 
+-duplicate dashboards
+-pane number formatting (instead of axis number formatting)- horizontal and vertical tile - apply to selected sheets - hide/show button
+-dummy variable
+-filter
+-Custom formatting number
+-Custom formatting average line
+-calculated fields reverse engineering
+
+
+
+Dashboard layout - yellow side by side
+
+Grouping columns - 
+Color blind-friendly 
+-show all button (base plan vs optimizer)
+
+Table layout
+-show filter by clicking on sheets
+-use parameter along with calculated field
+Manual sort by clicking on dimension (plant name or line name) in the column
+Copy from one dashboard to another
+-View data to split data - to check for data instead of having to go into the excel file
+-Object (Horizontal vs Vertical)
+-Look at history to see what I looked for 
+-Caption in sheet -> worksheet -> show caption
+-Analysis -> Table layout -> show filter label for row or columns
+-filter on the dimensions on the columns or row shelfs
+Apply to selected sheets only on the filter - 
+Changing directions when formatting number
+—rotate label by clicking on a label in the axis and click rotate label (doesn’t change size of label or increase size of dashboard)
+-edit format of the reference line to change color in case the I can’t see the text clearly
+-why does the formatting of the filters in tableau kept disappear
+-grouping (investment table)
+
+to-do : make sure all periods are shown not just the one that has values
+Why does dashboard formatting keep disappearing?
+
+
+
+Make a button with actions
+Made Decisions Dashboard: shows the decisions type by lines lines and implementation period
+Production Dashboard: shows the quantity by period names with filters
+Missed Demand Dashboard: shows the missed quantities by period names classified by products with filters
+Capacity Dashboard: shows the average ratio by lines by periods with filters
+Staffing Dashboard: show the staffing metrics (avg weekly shifts, avg ...) by period
+Investment Dashboard: shows the the summary of the investment by lines, plants, and period name
+
+Show empty columns
+Using set …
+
+Row banding
+-copy dashboard to powerpoint
+-Format filters in sheets not dashboard
+-how to unhide headers: 
+Changing order of stacked bar chart: drag the legend and changing it there
+
+
+Outer padding 
+Go to row & columns and click show headers from there
+Add borders around sheet: 
+Custom value in filter -> single value
+-Analysis: stack mark off to create overlapping bar chart with show me button adjust the size also
+Duplicate fields to keep color the same for each sheets
+-Duplicate filters to avoid redundancy
+-separate BANs
+-field labels in the bottom to avoid over crowding
+-copy color code by right clicking in the 
+
+If you can’t align the text in the dashboard view. go to the sheet and click on text and align it there
+-pick screen color
+-to format filter click on format filter and set controls in the drop down. Don’t edit title - isn’t permanent
+-to view height of a sheet click on layout in the dashboard view
+Instead using borders change background using gray and white
+-padding to create space between background
+
+
+
+To resize the worksheets automatically - click on the arrow and unclick fixed height
+Create blank and edit height to 10 and set background to black in layout to create separating bars
+Creating calculated fields for Gantt chart and also sorting using the calculated field (LOD expression)
+-Only relevant values (click in the filter and in the field ()
+-if doesn’t work click on the filter in the sheet and click show filter then click the drop down and select use relevant data only
+-select from list within the compare with other fields when in doubt
+Using all values in the data source in the drop down arrow & the show relevant only in the
+How to create dynamic titles that change based on filter selections in Tableau:
+https://www.youtube.com/watch?v=4NWCQzyz7C8
+
+-Visual tooltips - referencing another sheets
+Set the number to contrast the background tableau (smart color?)
+Hiding special character (Ex: 0) Right-click on the Measure pill and select Format. In the format window, go to Pane and hopefully the Special Values will be there. Select Hide in the Special Values section of the pane to hide the Null values.
+
+
+Cell border …. 
+Parameter to show/hide containers: the current value of the parameter is the only value that is available when you drag the field into the filter.   Do each one separately for each sheets
+-How to fit a tiled dashboard into a vertical object
+
+Use distribute contents evenly if you don’t see what you put in the container
+
+Nested containers
+
+-when tableau smart color not working change the size of the dashboard or 
+
+-But filters in containers to let it resize when you click the hide/show button
+-and placeholders (text) and click on distribute contents evenly to show hidden sheets
+-click on fix height the pin (in case you unclick on “distribute contents evenly”
+-Nested containers to hide filters and have dashboard resize without distributing everything evenly
+-Animation: Format -> animations
+-Highlighter (only work for discrete fields): 
+-Navigation object: navigate to … 
+-Data Validation
+-Tableau Prep
+-When you know you have successfully drop an item to the container you will see the dashline
+-Formatting shadow effect - bottom and right outer pane set to 5 and background to be gray also include a border line with a color
+-to exit presentation mode you can click on the icon down below
+-to create an instructions like in the viz connect kpi dashboard create an overlay image with the 
+
+If you see the dashline you know the item is going to be in the container if you release it 
+-Overlaying tableau dashboard through Figma for info button
+-or if you see the bold blue line around the corner
+—-ultra nested containers with fix width the left sheets
+
+
+When this doesn’t align check the  text mark to see if there is any spacing in between
+https://pilestone.com/pages/color-blindness-simulator-1
+-remove containers individually using remove containers
+-editing item hierarchy
+
+-set the largest container background to gray or not I’m not sure and adjust the padding to create the border… or change dashboard formatting — click on shading
+
+-working with test data in tableau – changing the excel file to test things out - edit data connection
+-refresh data source:
+
+-or click edit connection to make sure that the tableau workbook is in the right version
+
+
+-Dashboard instructions in powerpoint
+-Dashboard - copy image and paste to Power Point
+-Load custom shapes into Tableau: -> go to my document -> My tableau repository
+
+-reload shape
+-To create a highlight table like this 
+
+Make a calculated field named one = 1 and drag it on to the size. 
+Increase the size fit the cell (highlight table)
+-to adjust formatting of this 
+Go to marks and then click on label → check spacing from there
+–change dashboard formatting to gray and change everything in all of the dashboards to white
+
+Creating confidential data to outsource
+-fake data generator
+LOD calculation: 
+
+
+Ways to rename a data field: 
+Alias is for the members within a dimension not the dimension itself
+-Dual Axis chart - tips: 
+
+
+Capture screenshot with udemy: use copy fish and click on save image as
+-Add action within dashboard: 
+
+Combined axis charts - trick:
+
+Mark annotation: 
+
+Connect to pdf data: scan the document for a table
+-connect to microsoft sql server -> new custom sql
+-manage metadata - to change the workbook field names 
+
+-you can split from the datasource field
+-custom split: split all: preserve the first and second values. Split off
+
+
+
+-send to back powerpoint to replace the picture for instructions
+-save changes to original file the picture will auto update in the tableau workbook. 
+-Visual tool tips: tool tip: insert sheets
+
+Data validation:
+
+Data validation in excel:
+Sort & filter -> sort on specific columns such as the (plan name: base plan) and scenario (25 growth …)
+Then selected all the cells:
+You can see the cells at the bottom:
+
+
+
+
+
+
+
+
+
+Tableau Prep - cleaning data
+Blending colors: https://colorkit.io/
+-with color blindness: https://coolors.co/
+-copy dashboards from sheets to sheets
+-make sure in the sheet formatting - the column and row divider are set to none not just decreasing the levels to 0
+
+-edit connection might take a while …. Be patient
+- to close data source → go to a worksheet and hit close
+
+
+
+
+
+
+
+Make sure the containers are placed consistently for perfect alignment when showing and hiding labels
+
+This shit mess with the formatting
+-dashboard copy image - don’t do screen capture
+-if doesn’t perfectly
+
+Check for outer padding - also compares height between two items (if uneven) edit the height of the item with fixed height so that the other items will be the same in height
+
+-push text alignments to bottom to fix the uneven between on vertical with fixed height and one vertical with no fixed height
+-adjust size position and height from this pane
+
+
+Questions: Option to sort choose between missing columns or not in the dashboard (similar to a filter)
+-when text doesn't fit (#####) check the outer padding… 
+
+-duplicate a similar views you want to replicate and replacing views from there
+-when replacing the values into the duplicated views, it might take a while to load.. But you can click cancel and switch everything out until it is from the same table then it won’t take any time to load
+-also understand the data before building the dashboards
+
+-build containers first before building dashboards
+
+When there’s an outline like this 
+If you drop a new value into it, it will replace it 
+—screen capture then recreate the view side by side on the computer view
+-pick screen color - side by side screen
+-keep the previous field and lay another field on top to preserve formatting
+
+To see this
+
+Bring floating orders to front
+
+Double clicking to select the second container and triple to click on the container that contains both
+
+
+If the view doesn’t show for some reason check the containers if placed properly
+
+
+-don’t forget to edit the connections if you want the data to change
+
+
+
+—create a folder in “file explorer” for all the images you use within the workbook
+–move all the files into the files by dragging
+
+To view images and don’t have to click on each on at the time in file explorer
+
+Resize images and keep the sizes consistent
+
+Make two image equal in sizes and equal in blank spaces by using Paint - can also use to reduce size if the blank spaces are too much
+-make sure the containers that contains the two dynamic zones aren’t set to be controlled by the dynamic zones too
+
+To change aggregation type by default →go to default properties and 
+
+-You can also add comments so when the user hover over the pills they will know how to make it
+-you can also change the default number format 
+-tableau prep download free trial
+
+left padding so the words won’t be so close to the filter
+–creating histogram -show me – edit quantity bin
+-Tableau LOD (Level of Detail) Expressions Explained - FIXED, INCLUDE, EXCLUDE
+
+-
+Add stories point in like this
+
+
+
+Drag to make it easier
+
+
+For views to be seen more easily, go down to more lines instead having a long singular line
+
+Click on it to pinpoint exact errors
+
+ELSEIF not ELSE IF
+—when you the filter shows all value and you only want certain scenarios, click on only relevant data… along with the fixed LOD …. Also make sure to check that the filter on the dashboard is from that view with the fixed LOD
+-https://www.alt-codes.net/ to find other icons (for this case, the up and down KPI icons)
+
+
+Drag multiple fields into details
+
+Use spacer and reduce font size and change it to match background color
+
+-use range? If you want the icons to be messed up? Set the minimum to the perfect alignment of the icons
+
+-Drag the floating objects into the containers - by holding down shift and drag
+-floating containers with blanks
+
+
+To adjust the location and closeness of the tiled object … use outer padding
+—Power Point: send backwards mean sending back one time and send to the back means sending to back all the way
+—sometimes you can just replace the original picture with the same name and the image would automatically update
+
+Include the cash flow filter to filter out 0 values & remove rows & columns with missing or values of 0 
+-how to add fixed size to table in tableau? Choose fit entire view or sth like fix height and width
+And adjust the height of the scenarios
+-create read later folder  for all tableau related stuff
+-switching between desktop and monitor to see screen size comparison
+-use range for this case: min is the desktop size and max is the monitor size - it will shows entire view if you do it like this
+
+
+Go to this and check everything to remove duplicated images
+
+
+Check naming and see if it will automatically updates
+—To select all colors (for ex: 100 colors) —- hold shift key and press the first color and scroll down and press the last color
+-Difference between group and set: set: IN/Out but i
+
+
+
+
+ this is the data source filter
+
+
+
+
+LOD Calculation: {Include, Exclude, and Fixed}
+Dragging a dimension on top of another will create a hierarchy
+
+
+
+ATTR function 
+ 
+Then go to search bar
+
+-Pages shelf
+
+-sequential format
+-workbook & discover section: 
+
+-measures don’t affect aggregation and granularity level - dimensions do
+
+-for the labels, using can either drag the measure to the text or hit the T icon
+
+The status bar down at the bottom (zoom in) also shows the sum for all of the values above
+
+You can hover over this slowly in the tableau connect section to see all the views
+
+Right click a sheet and add a worksheet from here
+-date parts and date values: date parts (discrete), date values (continuous)
+-With Line Charts: there’s also the path option in the mark cards
+
+Convert between dimensions or measure by dragging it over the borderline
+
+Worksheet: copy crosstab -> to copy to Excel
+—--change default properties so you don’t have to change it again — Ex: number formatting
+
+Cluster: group together points that are close together
+
+Reference Band:
+
+Reference Distribution: 
+
+Instant analytics: by selecting a certain points a new reference lines will appear for example
+
+Editing data source connection names
+—--if the 
+
+
+Remove the tables with the warning signs if you want the error to happen
+—------------------different excel workbooks will lead to different tableau displays so make sure that you take that to account
+-transfer containers from sheets to sheets?
+-dual axis chart axiss are independent from each other - so formatting will also be independent
+
+-create a dummy Excel workbook to test and also be able to share it to others to receive advices
+-to count the number of fields within a dimensions convert it to a measure
+—Actions: actions will be automatically added to the filter shelf if you have the 
+
+This would not show because the genesis line name doesn’t exist: 
+
+-copy from a previous sheet version (for ex: the show or hide labels doesn’t work) → copy a previous version
+ 
+Right click on a sheet for this
+
+-sometimes when the view doesn’t resize remove itr and place it back again
+-use old version of the same dashboard
+-clear all filter and apply again
+-when the tableau workbook froze, click save (check the saved time in file explorer)  and then close
+
+If you just need one field – drag it to the row/column and hit clear shelf and then drag the field back in
+
+-copy formatting of sheets in tableau
+
+Data -> replace data source
+-sometimes when you close the datasource and there’s a pop up it means that there are sheets that still use that data source ->navigate to that sheet and replace the datasource
+—----
+—-copy sheet format????
+In Tableau, you should use extract data sources when you have a large amount of data that you want to analyze quickly or when you need to work with data offline. Extracts are highly compressed subsets of your data that are stored in a Tableau-specific format, allowing for faster analysis and visualization. Extracts can be updated on a schedule or as-needed, and can be refreshed with updated data as necessary.
+On the other hand, live data sources should be used when you need to work with real-time or near-real-time data, or when you need to perform complex calculations that require the entire dataset to be available. Live connections allow you to connect directly to your data source and query the data in real-time. However, live connections can be slower when dealing with large datasets or when performing complex calculations.
+
+
+
+-to hide the background images - screen capture the blank grey space and overlay it - also send the (close) to the front if there’s  some word in the box
+
+Direct download link for excel (copy sharepoint link, add to Gecko and use tinyurl)
+
+
+Change data type to insert corresponding values list “add values from”
+
+Change from numbers to strings so you can create relationships:
+
+-how to check which sheets use which data source in Tableau
+
+
+-create one that combined 4 lines and use parameter (control zone visibility) to hide it
+–add blank in between to fix sizing issues:
+
+
+Add another data source below sample - superstore (for blending?)
+
+(create one on the right)
+
+
+Editing pictures in canva -> share -> download 
+---------------------------------------------------------
+To unselect all the applied sheets - choose only this worksheet
+
+If the view is like this (grey), you can access it through the layout
+—-crosstab drag and see the line in between (you can either drop it in the view or on the rows and columns shelf)
+-why does my container doesn’t have the pin icon and some containers do 
+-Question:
+
+Format text object:
+
+
+-take pictures in meeting (but Silence mode is off): be careful
+
+-Tiled Containers: can’t add black lines to separate filters
+
+
+—Download: export to pdf
+
+You can copy content from sheets to sheets as long as it’s something that is not used for only that specific sheet 
+-when you paste it will be changed to floating
+-Adding totals:
+1st way: 
+
+
+-Quick Table Calculation -> compute using (table across vs table down) (also works for visualizations that are not tables)
+
+-how to change grand total header name – grouping in the view doesn’t work?
+-stacked bar chart - visual tool tip to show every bar?
+-visual tooltip (bar chart) - sort descending
+-usually hide other tooltips if you have a visual tooltip
+-how to create a pyramid chart - 
+
+or:
+
+-Show header on measure to see axis -> edit and click on “reversed”
+
+→show hidden fields? —> analysis -> reveals hidden data
+—how to unhide?
+-create pyramid chart (3rd way) by creating two charts and hiding views (reverse one)
+-to show excluded values: go to the filter and retrieve it there
+
+-when the dashboard froze – double click on a dashboard -> Edit in shelf: 
+
+Pyramid for one dimension: 
+“”
+
+Sometimes when view is too small, you won’t be able to see text labels
+
+
+Left click to prompt this up, right click to hide indicator
+—---tiling everything? So that even if the dashboard changes it won’t affect it
+(especially the titles: 
+
+
+For the changing field -> make the titles a different color
+Even cell alignment for all
+
+Too see where the container is if you have blue borders, check for this: 
+
+
+This changes the sheet view only not the dashboard viewz
+
+Changing from “measure names” to “just one field” for the visual tooltip to work (only show 1 plant instead of 2 when hovering over the TS plant)
+
+
+Fixed size with standard view?
+DATEDIFF:
+
+
+
+ <- click this to prompt the grey window up
+
+
+
+View underlying data by -> right click on the bar -> view data -> full data -> show fields (all)
+-histogram parameter in the quantity bin: 
+
+
+-By default, when creating parameter, it is a number … of all values that you can enter in
+ 
+
+All functions are Blue but the Logicals functions are Black in color
+Spacing:
+
+—>Clear manual sizing: (fix the rotating label spacing between China and US somewhat)
+
+—> to go back to default spacing
+
+Website to replace color image: https://www.imgonline.com.ua/eng/replace-color.php
+https://www.fotor.com/photo-editor-app/editor/basic
+—navigate back to dashboard button
+-change the photo name so that it will change on the dashboard —
+
+—-- fit (make sures that the image fits within the container  vs center image (center the image in the container)
+
+— Trend Line (Tableau) - two numeric only (could be dimensio and a mesure but both has to be numerical)
+
+-Reference line on another value — create a relationship and add that field from the new table to “Details” you can create a new reference line from there
+
+
+Edit in shelf: so you won’t have to create a new field
+—- Overview dashboard doesn’t have data so I can carry it over from another place
+
+It is synchonized when pasting across workbooks
+
+Add fixed width for both of these images so that they will be consistent in sizes
+—--- or distribute contents evenly
+
+
+Show and hide button in the same container with filters but it is within another container — separate from the filters -the blank will automatically resize
+—remove the “Ignore Dashboard”, instead hide the sheets individually (even though the sheet wasn’t used in the dashboard, it is used in another sheet →that’s why it’s hideable
+
+
+Or click on delete. What about checking what dashboard a sheet belongs too
+
+
+This will use a date truncate function to extract the month: DATETRUNC('month', [From (production.csv+)]) . Turning it into this
+
+
+Create custom dates: 
+
+
+Formatting dates
+
+
+
+
+When you transform the periodname to a date — you can then format the dates like above
+-relationship cardinality: “type of relationships”
+
+If you turn stack mark off though: —> then the reference line will change (keep in mind if you add it to details)
+
+To write on reference line value, use custom formatting in text
+
+
+
+
+
+Use dimension as color instead of measure will result in squares not fitting perfectly
+
+
+Use this red green gold diverging if u want the traffic lights but for continuous fields
+–create a custom palette
+
+
+If you check another workbook that someone has done, and you go to edit the filter for the measure names and you can’t see some fields, it’s probably because there was changes made to aliases (aliases only work for dimensions)
+—Has aliases → check for the asterisk: * 
+
+When the numbers don’t make sense, create a visualization on a separate sheet with that measure so you can grasp it better — or duplicate sheets and mess around with that field
+
+If you want to format the entire table: click on the capital A instead of formatting separate fields
+
+
+If you can’t see it in the excel workbooks then it’s because it’s a calculated field
+—------------------------------------------------------
+If the size of the unselectable is bigger and you can adjust it, make sure that the selectable dashboard is set to be tiled
+
+-remove filler words: Like, um, so, but, oh
+
+Same name but different by using the //
+—--------------
+View data using this 
+–Use table and click on show fields
+
+
+If creating it in Tableau is not possible, 
+Change the Excel workbook and have the engineer code the program to provide a similar output in Excel that I improvised
+
+Add custom color palette: go to —My tableau repository is in “documents” - open the preferences tps file - (open with Notepad) 
+https://www.youtube.com/watch?v=l9PXfF_gXZY
+
+
+https://coolors.co/  (similar to color kit)
+
+-to paste it in: you need to backspace it and leave enough room to paste it and also write the #
+
+Sometimes Tableau will recover a version for you if it closed and you didn’t save it
+. it looks something like this
+
+
+Adding the tooltip — it will also shows (alt+ click to navigate…)
+-remove the background manually: –restor** the bg manually
+
+Everything that is italicized is auto-generated
+–measure is used in a dual axis chart
+Tree Map
+
+-Bullet Chart
+
+→ breaking it down to different tree maps
+
+
+
+Context filter … ehh
+Tableau Lookup
+
+
+
+Tableau Zipping hack -> change the file type to zip → and then unzip it to see the underlying  data
+—dynamic title then use a sheet?
+-visualize it however you want also ask clarifying questions at the beginning
+
+—-------------
+Legends won’t show the start and end if 
+
+Opacity:
+
+
+Help: manage product keys
+—------------
+Pull data from relational databases(Access, SQL Server, Oracle, etc using custom SQL queries)
+
+Data Interpreter: (used for data cleaning etc)
+
+Connecting to a data source on Tableau server
+—--You can create folders when you are in the 
+Select the fields 
+The create folders option would not work if you are in the group by data source folder
+—-------------------------
+Tableau Moving Average Calculation
+
+
+
+
+
+Custom Table Calculation:
+
+… there are many more functions
+
+
+conditional, top N filters etc, only works for Dimension and based it on another measure
+
+
+ 
+Exclude only works for list or custom lists
+
+
+
+
+
+Parameter can also be used in a reference line 
+
+
+
+
+
+
+
+
+
+Swap sheets by using parameters or sheet selector
+https://help.tableau.com/current/pro/desktop/en-us/dashboards_sheet_selector.htm
+
+Apply responsive designs for specific device layouts:
+
+Comprehensive Steps to Publish a Workbook
+
+In Tableau Desktop, open the workbook you want to publish. (must sign in to server first)
+
+Select Server > Publish Workbook.
+
+If the Publish Workbook option does not appear on the Server menu, make sure a worksheet or dashboard tab is active (not the Data Source tab).
+
+If necessary, sign in to a server. For Tableau Cloud, enter https://online.tableau.com. For more information, see Sign in to Tableau Server or Tableau Cloud.
+
+In the Publish Workbook dialog box, select the project, enter a name for the workbook, and add search tags.
+
+Tags help users find related workbooks when they browse the server. Separate tags using a comma or space. To add a tag that contains a space, put the tag in quotation marks.
+…
+Click Publish.
+————-
+Publish a data source:   https://help.tableau.com/current/pro/desktop/en-us/publish_datasources.htm
+
+Print views from desktop:
+https://help.tableau.com/current/pro/desktop/en-us/publish_datasources.htm
+
+To begin, select File > Page Setup or go to Print if set up is not needed
+————————-
+After you have configured the Page Setup settings, select File > Print
+Exporting data**: https://help.tableau.com/current/pro/desktop/en-us/save_export_data.htm
+
+
+Extract your data
+
+Another way to export all of your data or a subset of your data in the data source is to create an extract (.hyper) file. An extract functions as an independent data set, which you can use to connect directly from Tableau. For more information, see Extract Your Data.
+
+Export the data source
+
+Export data used in the view
+
+
+4.2. Schedule data updates
+4.2.1. Schedule data extract refreshes
+4.2.2. Schedule a Tableau Prep workflow
+4.3. Manage Published workbooks
+4.3.1. Create alerts
+4.3.2. Create subscriptions
+
+
+This only work for that specific sheet:
+
+
+Copy data is the entire data without anu filters applied? And copy crosstab is just for the view with filters applied?
+
+Font size jump in Tableau?
+
+
+
+
+IN THIS ARTICLE
+2.1.1. Write date calculations (DATEPARSE, DATENAME…)
+
+Date Function
+Description
+DATE
+Returns a date based on the year, month, and day.
+DATEADD
+Adds a specified interval to a date.
+DATEDIFF
+Calculates the difference between two dates based on a specified interval.
+DATENAME
+Returns a datepart as a string.
+DATEPARSE
+Converts a string into a date.
+DATEPART
+Returns a specified part of a date.
+DATETRUNC
+Truncates a date to a specified level of precision.
+DAY
+Returns the day of the month from a date.
+ISDATE
+Returns true if the expression is a valid date.
+MAKEDATE
+Returns a date based on the year, month, and day as separate arguments.
+MAKEDATETIME
+Returns a datetime based on the year, month, day, hour, minute, and second as separate arguments.
+MAKETIME
+Returns a time based on the hour, minute, and second as separate arguments.
+MAX
+Returns the maximum value in a date range.
+MIN
+Returns the minimum value in a date range.
+MONTH
+Returns the month from a date.
+NOW
+Returns the current date and time.
+QUARTER
+Returns the quarter from a date.
+TODAY
+Returns the current date.
+WEEK
+Returns the week number from a date.
+YEAR
+Returns the year from a date.
+ISOQUARTER
+Returns the ISO quarter from a date.
+ISOWEEK
+Returns the ISO week number from a date.
+ISOWEEKDAY
+Returns the ISO weekday number from a date.
+ISOYEAR
+Returns the ISO year from a date.
+
+
+2.1.2. Write string functions
+
+String Function
+Description
+CHAR
+Returns the character for a given Unicode code point.
+CONCAT
+Concatenates two or more strings together.
+CONTAINS
+Returns true if a string contains a specified substring.
+ENDSWITH
+Returns true if a string ends with a specified substring.
+FINDSTRING
+Returns the position of a specified substring in a string.
+FINDSTRINGEXACT
+Returns the position of a specified substring in a string, case-sensitive.
+LEFT
+Returns the specified number of characters from the beginning of a string.
+LEN
+Returns the length of a string.
+LOWER
+Converts all characters in a string to lowercase.
+LTRIM
+Removes whitespace from the beginning of a string.
+MID
+Returns a specified number of characters from a string, starting at a specified position.
+PROPER
+Converts the first letter of each word in a string to uppercase, and all other letters to lowercase.
+REGEXP_EXTRACT
+Returns the first match of a regular expression in a string.
+REGEXP_MATCH
+Returns true if a string matches a regular expression.
+REGEXP_REPLACE
+Replaces all occurrences of a regular expression in a string with a specified replacement string.
+REPLACE
+Replaces all occurrences of a specified substring in a string with a specified replacement string.
+RIGHT
+Returns the specified number of characters from the end of a string.
+RTRIM
+Removes whitespace from the end of a string.
+SPLIT
+Splits a string into an array of substrings based on a specified delimiter.
+STARTSWITH
+Returns true if a string starts with a specified substring.
+TRIM
+Removes whitespace from the beginning and end of a string.
+UPPER
+Converts all characters in a string to uppercase.
+
+
+2.1.3. Write logical and Boolean expressions (If, case, nested, etc.)
+
+Expression
+Description
+AND
+Returns true if both expressions are true.
+OR
+Returns true if at least one expression is true.
+NOT
+Returns the opposite of a boolean expression.
+IF
+Returns one value if a condition is true, and another value if it is false.
+IIF
+Short for "Immediate IF", returns one value if a condition is true, and another value if it is false.
+NULL
+Represents a null value.
+ISNULL
+Returns true if a value is null.
+IFNULL
+Returns a specified value if a value is null, otherwise returns the value itself.
+ZN
+Replaces null values with zero.
+TRUE
+Represents the boolean value "true".
+FALSE
+Represents the boolean value "false".
+XOR
+Returns true if exactly one expression is true.
+SWITCH
+Evaluates a series of conditions and returns a corresponding value for the first condition that is true.
+
+
+2.1.4. Write number functions
+
+Number Function
+Description
+ABS
+Returns the absolute value of a number.
+CEILING
+Returns the smallest integer greater than or equal to a number.
+FLOOR
+Returns the largest integer less than or equal to a number.
+INT
+Returns the integer portion of a number.
+LN
+Returns the natural logarithm of a number.
+LOG
+Returns the logarithm of a number to a specified base.
+LOG10
+Returns the base-10 logarithm of a number.
+MAX
+Returns the maximum value in a list of numbers.
+MIN
+Returns the minimum value in a list of numbers.
+MOD
+Returns the remainder of a division operation.
+PERCENTILE
+Returns the value at a specified percentile in a list of numbers.
+RANK
+Returns the rank of a number in a list of numbers.
+ROUND
+Rounds a number to a specified number of decimal places.
+SIGN
+Returns the sign of a number (-1 for negative, 0 for zero, 1 for positive).
+SQRT
+Returns the square root of a number.
+SUM
+Returns the sum of a list of numbers.
+TRUNC
+Truncates a number to a specified number of decimal places.
+
+
+2.1.5. Write type conversion functions
+
+Type Conversion Function
+Description
+ATTR
+Returns the value of an attribute as a string.
+BOOL
+Converts a value to a boolean.
+DATE
+Converts a value to a date.
+DATETIME
+Converts a value to a date and time.
+FLOAT
+Converts a value to a float.
+INT
+Converts a value to an integer.
+STR
+Converts a value to a string.
+TIME
+Converts a value to a time.
+TOBOOLEAN
+Converts a value to a boolean.
+TODATE
+Converts a value to a date.
+TODATETIME
+Converts a value to a date and time.
+TOFLOAT
+Converts a value to a float.
+TOINTEGER
+Converts a value to an integer.
+TOSTRING
+Converts a value to a string.
+TOTIME
+Converts a value to a time.
+
+
+
+2.1.6. Write aggregate functions
+
+Aggregate Function
+Description
+AVG
+Returns the average value in a list of numbers.
+COUNT
+Returns the count of values in a list of values.
+COUNTD
+Returns the count of distinct values in a list of values.
+MAX
+Returns the maximum value in a list of values.
+MEDIAN
+Returns the median value in a list of values.
+MIN
+Returns the minimum value in a list of values.
+PERCENTILE
+Returns the value at a specified percentile in a list of values.
+STDEV
+Returns the standard deviation of a list of values.
+SUM
+Returns the sum of a list of values.
+VAR
+Returns the variance of a list of values.
+
+
+2.1.7. Write FIXED LOD calculations
+
+LOD Function
+Description
+{FIXED [expression]}
+Computes the aggregate value for a fixed set of dimensions specified by the expression.
+{INCLUDE [dimension], [expression]}
+Computes the aggregate value for a set of dimensions that includes the specified dimension and any others specified by the expression.
+{EXCLUDE [dimension], [expression]}
+Computes the aggregate value for a set of dimensions that excludes the specified dimension and any others specified by the expression.
+
+
+Shading (column/ row banding) doesn’t work for highlight table (square - color on mark card …)
+
+
+
+Format field labels vs headers
+—-------
+Create a duplicate and drag it to the mark card so that it doesn’t affect the setting of the original one (ex: different colors in tabular plan name and BAN plan name)
+-view data by clicking on individuals table in the data source 
+—--------------------------------------------
+Date Truc = Month, Year where as date part = Month ?? (applies for taking out the months only)
+
+Check if the calculated fields are correct
+:  
+Statistical summary card: 
+
+
+
+Data highlighter will be useful for a more granular breakdown. For example, sub-category … do the same by right clicking and click on show highlighter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+???
+
+
+-can’t press undo to change these back 
+
+When color doesn’t work – take fields out one at a time to diagnose the problem
+—-change total name:
+
+
+https://www.youtube.com/watch?v=0SkKrOEzGNk
+Add all subtotals then go the field right click or click arrow and then hide the subtotals for that field (by clicking on the Subtotals)
+
+
+Stop saying ummm but use pauses and say the words longer
+
+Advanced Mapping:
+
+
+Click on the pin again to unzoom, unpan (moving), etc. Magnifying glass to look for locations
+Filtering in Maps – can also filter using a measure like SUM(Profit)
+
+
+
+Rectangular selection:
+Rectangular selection and then group:
+Radial Selection:
+
+
+
+
+Modify Locations within Tableau: 
+
+Create a hierarchy to solve the issue of ambiguous locations
+-use a background image map
+
+Annotate point
+
+Phone layout: 
+Default: the same as desktop
+-how to take a sheet from one dashboard to another one?
+—if u click unhide all sheets then the options to drag another sheet into the view will become available
+—-------duplicate as crosstabs in Tableau (turn a graph, for example, into a table)
+
+–dynamic zone visibility can be substituted for — the table swapping using calculated fields
+
+
+-create mock data in excel if it is table - copy crosstab
+Use discord for Viz trouble shooting
+
+WINDOW_SUM
+
+Tableau Publishing options:
+Publish Workbook… by default: Tableau Public
+Sign in to server to publish to other platforms
+
+You can select what you want to publish to tableau online
+—-Sharing options:
+File -> Export Packaged workbook
+export PowerPoint 
+Select view … static view (picture)
+File share -> Tableau Online. Or the icon on the right also prompts up the same thing
+Copy image instead of cross tab and data to copy the view for just one sheet
+Export as version 
+Print to export to pdf
+—--
+Sql:
+
+
+**https://www.flerlagetwins.com/2019/06/legends.html**
+
+
+■
+
+https://www.iconfinder.com/
+-hold down shifts and drag to change from tiled to floating
+
+Stop saying im going to, say I will … 
+
+Metadata grid: renamed vs remote field name
+-right click field and hit describe to view the remote column name if you renamed it and forgot … or manage meta data
+
+-connect to spatial files and joining spatial data… watch udemy
+-using calculations to create joins:
+
+Worksheet - > show captions -> write what you added into the dashboard (only within the area of that specific sheet)
+—Filter based on parameter value
+Use a Parameter as a Filter in Tableau: https://www.youtube.com/watch?v=xgw68_vDE6s
+
+Data splitting … 
+-joining from multiple data sources. Just click add
+
+
+-can’t hide row column in the datasource or data pane if it is used in the sheets
+
+
+
+
+
+
+These two cylinders represent an extract: 
+
+View extract properties
+
+Difference between live connection and extract is that you need to refresh the data to pull it in for the extract
+
+
+Single tables: storing the join only
+Multiple tables: storing all the different sheets
+
+Deciding between joining tables and blending data:
+Summary:
+To decide whether to join a table or blend data, consider the number of connections in your workbook, how the data is related, the number of records/flows, and the type of views needed.
+Traditional table joins are usually the best choice as the work is done by the database itself, cross-database joins are recommended over data blending due to fewer limitations, and data blending should be used when there is a large amount of data in the secondary table.
+Table joins are better for one-to-one relationships while one-to-many or many-to-many relationships can cause duplicated data and performance issues.
+Data blending only supports left joins and is more flexible for quickly changing linking properties but should be avoided on dimensions with many unique values.
+To efficiently combine data sources, limit the number of tables and create a separate data source for each analytical scenario. Avoid blending data on dimensions with many unique values.
+
+
+
+Square bracket means that it is optional
+—we can only edit calculations from the data pane
+
+
+Can also drag the ProfitClassifier into colors to color the profits by three colors
+
+Ad-hoc calculation
+
+
+
+To create the pill hold down ctrl and then drag the pill from the shelf into the data pane
+-changing the name in data pane in the case above would also change the name in the shelf
+
+
+
+
+
+
+
+
+
+Avg from each customer names (sum of all orders/ # orders for that customer) then sum all the avg then take the average for each regions
+-
+
+
+Share button in the lower right corner
+
+Paid then go to the server. Unpaid then go to file
+
+Dimension vs measure:
+Discrete vs continuous: Blue = Discrete, Green = Continuous
+Discrete will create headers , continuous will create axis
+
+# is a discrete measure that’s why it gives you the option to convert to continuous
+—Same with dates
+
+Import and manage custom geocoding
+-custom geocoding: Also, there is websites that can let you generate many locations at once
+
+
+
+
+
+After you install the spark driver, you can see the following window pops up (databricks)
+
+
+For visual tooltip - try to remove the gridlines, row/column dividers etc because the view is much smaller
+
+When faces formatting issues, try adjusting it manually, it might get fixed
+
+Edit tooltip alignment here + hit space & backspace
+Formatting totals:
+
+
+Remember to edit tooltips for all, not just one chart
+
+Reset and preview tooltip
+
+
+Editing paddings and making sure that there is no blank to result in equal sizing
+
+Capturing scrolling screenshots
+https://softwarekeep.com/help-center/how-to-capture-scrolling-screenshot-in-windows-
+
+Make sure there are borders (if needed) when in presentation mode
+
+Convert List into Comma Separated Values - Excel #Shorts:
+https://www.youtube.com/watch?v=KLFw96yaKME
+
+
+
+Change the level in the column/row divider to choose if want more dividers or not
+—Worksheet → show titles
+
+Change this from month to quarter
+-create a parameter to limit the range of the filter:
+
+-capture scrolling screenshots … not done
+
+Create mass number of frames first and then enter in text later … henry ford
+
+-for the dashboards with automatic sizing … consider making the instructions a pop-up box that is much smaller than the actual thing
+-dashboard -> copy image for more precise image size
+—decrease screensize Tableau? … scrolling screenshot
+
+Band levels and band size
+Chloropleth map
+
+
+Analysis -> trend line then edit trend lines
+
+
+
+
+
+
+Use a text box with white background and border for really long dashboards
+
+Use floating objects when the dashboard size is static
+-
+Only if it is a measure
+-Multiple table extracts:
+
+Compare to average -> use reference line or subtotals (using the average)
+
+Nested Source:
+
+
+
+Excess Kurtosis
+
+
+Tableau Data Analyst exam will involve a lot of LOD
+
+Interquartile range:
+
+
+
+
+Create custom territories:
+https://help.tableau.com/current/pro/desktop/en-us/maps_custom_territories.htm
+
+
+
+
+
+Validating data with Tableau Prep
+If Tableau crashes, consider restarting computer
+
+View data of multiple marks at once:
+
+
+
+Show time in date filter 
+— Show Times box not ticked
+
+
+Hitting end right next to home to scroll to the bottom of the page. 
+For the tableau certified data analyst exam, read questions more carefully
+
+Map -> Background Layers - > to see the cities displayed on the map (not the fields)
+
+
+Think: Legend??
+
+
+
+
+Use map layers if there is a question on a location but you don’t have the field with the data for it
+
+
+Parameter actions: allow you to click on the field in the view similar to “highlight options”
+This vs. changing the data type … hmmm
+Giving bar charts some spaces in Tableau: add total and then hide the total -> change total’s label
+
+
+
+Click on the State/Province list, and select the State. So Tableau will recognize the city as part of the states in the Country/Region United States.
+
+
+
+
+
+
+These dimensions are headers in the formatting
+https://tinywow.com/tools
+
+Directly from Tableau Public
+Scrolling screenshot on chrome - on iphone (use safari) then choose full screen - export to pdf
+
+
+Add floating containers to display parameters in the dashboard information
+—Tableau extensions
+
+Click on it to see what it does
+
+
+
+-only use relevant values only for the #3 option: ProdCode. And the other two (all value) because I don’t want all three to depend on each other but rather Prod Code depend on ColloquialName and ColloquialName depend on PlantName
+
+
+
+Can only add filter values into the title of the sheets. Not the text object 
+
+
+Duplicate dashboards if you can’t insert tiled containers
+… can’t search for values within a parameter???
+
+-sometimes you don’t have to duplicate the field to make it independent??? (to make dependent, select (apply to selected sheets) … maybe because it is in a separate dashboard … the only time you would need to make duplicate is to …. ???  … maybe it’s just the color ??? …
+-Add Filters Extensions
+
+Highlight entire row:
+
+If you hide the story then all the dashboards become un-navigatable
+-dashboard to story might take time to update
+-adding gif to dashboard … Add url to gif
+
+Embed Tableau into weebly:
+Go into Tableau public 
+Step 2: Find the link.
+Option 1 - Click "Share" button --> Embed Code -> Copy Link
+-go to weebly then → Embed Code -> hit refresh on weebly
+
+
+-state challenges early on- … I am having issue with the research etc
+-don’t hesitate to reach out for help, it support, app issue etc
+
+Record a video clip
+
+You might think the average is off … just select the fields then get the sum and do the average manually
+-always remember to be on the vpn to use these applications …. Test it out to trouble shoot
+
+-How to ask for more work when you have completed everything during an internship???
+
+—connecting google analytics with Tableau:
+https://help.tableau.com/current/pro/desktop/en-us/examples_googleanalytics.htm
+
+—-- 
+Use ai voice to do tutorial video
+—------------------------------------------------------
+read instructions carefully form previous intern to see if you missed anything … “SKU Type Selector” for example. 
+
+-to unhide embedded sheet - you have to go to the sheet not the dashboard
+
+Tutorial: voice over in davinci resolve
+—Learning about all the different tableau licenses
+
+
+
+
+
+-remove all data within Tableau to create a template
+—Rename data source connection
+
+Calculate manually then add a text box for fixed kpis
+
+https://www3.lunapic.com/editor/
+Change image color
+—create tutorials in word and convert to pdf 
+-using word
+–use mock data set for tableau tutorial video – 
+
+-Converting from Tableau to Power BI-
+https://v2.embedded.tableau.com/
+
+https://help.tableau.com/current/api/embedding_api/en-us/index.html
+—If twbx comes with everything, then why does it ask for where is the file
+
+-Unpackage a twbx: 
+https://help.tableau.com/current/pro/desktop/en-us/save_savework_packagedworkbooks.htm#unpackage-a-twbx
+-to package, click on the twbx and select unzip/ or unpackage
+–they will provide you with an extract file
+-How to change tableau data extract to excel or csv – have to create a chart and then export everything
+
+How to zip a file
+
+
+
+
+Blend is the left outer join after aggregation at the level of granularity.
+
+You can only annotate certain things. Tables, for example, cannot be annotated
+
+
+
+
+
+https://help.tableau.com/current/pro/desktop/en-us/calculations_tablecalculations.htm
+
+
+
+
+
+
+
+
+What happen when you add filter to context in tableau?
+Tableau Prep and Server in data analyst exam
+
+Measure creates axis title
+
+Dimension doesn’t 
+
+
+Show all worksheets in the workbook
+—-----------------------------------------
+Sankey Diagram: 
+
+
+
+Hover over without dropping to see the changes
+
+You can only extend the width of the bar if the date is a dimension and not a measure
+
+Data types has to be string or else it won’t work
+
+
+
+You can bold it both from this pane and the data pane
+
+Customize summary card
+
+Edit axis to change the axis title when you use a measure instead of a dimension
+.. 
+—----------------------------------------------------------------
+
+
+Doensn’t work:
+
+This work:
+
+
+Without the filter on values, it will output the correct values:
+
+
+Make sure the values and the display as match so that everything would work (I didn’t work for me as I had a mistake where the value is Standard Deviation for Display Name and it is displaying as Standard Deviation
+
+
+To apply it to the Events - Analytics - Visual Tooltip… I had to drag the sheet into the dashboard and then go to selected sheets … it didn’t appear before that for me to select …. Kinda weird
+
+
+You can reorder these around
+
+Make a range of fixed width and sliding it
+—-----------------------------
+Tableau parallel pulling - union - csv etc. 
+
+Format background cells with multiple colors 
+Use a bar visuals - adjust the size to max – also include a field like 0 -> Sum (0) in the details so all of the bars are equal in length (MAX function ?)\
+
+Copy and paste worksheet formatting
+
+Extract vs live connection - certain functions would be missing for live connections (ex median)
+
+Hyperlinking …. And then adding the hyperlink in the tooltip to make the link clickable 
+
+-accessing tableau server - sign in to server and publish workbook
+
+-make legends arrange from left to right —- arrange legends – make it space saving
+→ create a vertical container and drag the legend in rearrange as I would like
+
+– within pane calculation: ex: PERCENTILE[Inspection-PTOReceived, 0.75]
+
+Rotate labels and different table connections( EX: Timelines, IX Business Metrics)
