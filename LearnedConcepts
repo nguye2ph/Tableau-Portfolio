@@ -352,3 +352,5 @@ dual axis - to conditionally format multiple columns
 remove nulls to edit alias doesn't work for all date types
 
 2026: adding a dummy column to allow easier excel export without messing with the structure
+-creating a blank calculated field and remove the grid lines to avoid having the blank measure column
+
