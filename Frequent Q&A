@@ -57,7 +57,6 @@ Let's say we want to return a list of emails for the Superstore sales people. We
 
 LOWER(LEFT([Person],1)) + '.' + LOWER(RIGHT([Person], LEN([Person]) - (find([Person], ' ', 1)))) + '@superstore.com'
 
-Powered By 
 15. What is a dual axis?
 A dual axis in Tableau is a technique used to combine two separate visualizations on a single axis. It allows users to compare two measures or sets of data with different scales or units of measurement.
 
@@ -103,3 +102,7 @@ Optimize data sources: One of the main reasons for slow workbook performance in 
 Optimize your workbook: Another way to improve performance is to optimize your workbook by simplifying the layout, removing unused fields and sheets, and minimizing the use of complex calculations and visualizations. You should also consider reducing the number of dashboard elements and filters to improve performance.
 Use data extracts: Data extracts are pre-aggregated subsets of data that can be used to speed up workbook performance. By using data extracts, you can reduce the amount of data that Tableau needs to process, which can improve performance.
 Use filters: Filters can be used to reduce the amount of data that Tableau needs to process, which can improve performance. You can use filters to restrict the data that is displayed in your visualization, or to remove unnecessary data from the view.
+incremental refresh instead of full refresh
+
+other tableau calculations:
+ATTR is for displaying multiple fields as ***
