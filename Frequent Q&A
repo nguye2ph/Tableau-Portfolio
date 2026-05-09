@@ -26,6 +26,7 @@
 - Groups = manual grouping of values
 
 - Calculated fields = custom fields created from existing fields
+- CASE VS IF -- CASE requires less repetitive fields calling 
 
 - Dual axis = overlay two measures on one chart
 
