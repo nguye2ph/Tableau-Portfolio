@@ -1,108 +1,45 @@
-2. How does Tableau compare to other BI tools?
 
-A few of the advantages of Tableau over other BI tools include:
+- User‑friendly drag‑and‑drop interface  
+- Supports wide range of data sources  
+- High design flexibility for custom visuals  
+- Large, active user community  
+- Downside: pricing model
 
-a user-friendly interface: the drag-and-drop feature allows an inexperienced user to ramp up fairly easily and start building charts in minutes;
-the wide range of data sources that are supported by the application: from relational databases to flat files to web sources, there are many ways to connect your data using Tableau;
-design flexibility: Tableau's flexibility allows users to design custom visualizations; and
-a supportive user community: the large and active community of users makes it easy to get your Tableau questions answered.
-One of the downsides of Tableau is its pricing model. At $70/user/month, that's an $840 license per user on an annual basis (before any sales discount is applied). It's not cheap!
+- Joining = same data source, creates flattened table  
+- Blending = different data sources, queries remain separate, per‑worksheet behavior
 
+- Live connection = real‑time queries, slower on large data  
+- Extract = optimized static snapshot, faster, supports refresh schedules
 
-. What is the difference between joining and blending in Tableau?
-Joining and blending are two ways to combine data from multiple sources in Tableau, but they differ in how they integrate the data.
+- Dimension = categorical descriptor  
+- Measure = numeric, aggregatable value
 
-Joining combines data from different tables within the same data source by linking them together based on a common field. Joining creates a new, flattened table by combining the data from the linked tables.
-Blending, on the other hand, combines data from different data sources by linking them on a common field, but it does not combine the data into a single, flattened table. Instead, blending maintains the separate data sources and queries them independently. Blending is useful when working with large data sets or when maintaining the granularity of individual data sources is necessary.
+- Discrete (blue) = countable, categorical  
+- Continuous (green) = numeric range
 
-Blending is happening per worksheet (primary field in orange and secondary field in blue)
+- Dashboard best practices: design for audience, remove clutter, use color intentionally, choose correct chart type, ensure smooth user flow
 
-8. What is the difference between a live connection and an extract in Tableau?
-In Tableau, there are two ways to connect to data: live connection and extract connection. The main difference between these two connection types is how Tableau interacts with the data source.
+- Order of operations: filters follow Tableau’s pipeline; use context filters to control precedence
 
-A live connection means that Tableau is connected directly to the data source and queries the data source in real-time as you interact with the visualization. However, live connections can be slower and less efficient than extract connections when working with large data sets or complex queries.
-An extract connection, on the other hand, means that Tableau creates a static copy of the data source and stores it in a Tableau-specific format called a "data extract." This extract contains only the data that you need for your analysis, which can improve performance and reduce the load on the data source. Extracts can be refreshed or updated on a schedule, or manually as needed.
+- Parameters = user‑defined dynamic inputs  
+- Sets = logical grouping based on conditions  
+- Groups = manual grouping of values
 
-9. What is a dimension vs. a measure in Tableau?
-In Tableau, a dimension is a categorical variable that describes data, while a measure is a numerical value that can be aggregated or computed in some way. Dimensions are typically used to group and slice data, while measures are used to calculate and analyze data.
+- Calculated fields = custom fields created from existing fields
 
-10. What is a discrete vs. a continuous value?
-In Tableau, a discrete value is a distinct value that can be counted (number of dogs in the park, number of rainbow colors, etc.), while a continuous value is a numeric value that can take on any value within a range (150.38 lbs, 6 ½ hours, etc.). Discrete values (in blue) are typically used for categorical data, while continuous values (in green) are used for numerical data.
+- Dual axis = overlay two measures on one chart
 
-discrete vs continuous value chart
+- LOD expressions:  
+  - FIXED = ignore view granularity  
+  - INCLUDE = add dimensions - when there is hierarchy for example
+  - EXCLUDE = remove dimensions
 
-11. What are some best practices for designing Tableau dashboards?
-A fairly common question that comes up during Tableau interviews is about dashboard design. Make sure to discuss key points, like designing with the audience in mind, eliminating clutter, using colors and shapes strategically, as well as using the right kind of chart for the information you're looking to convey. 
+- Actions: filter, highlight, go to URL, go to sheet, change parameter, change set values
 
-Another important aspect is the ability to control user flow in a dashboard. The user shouldn't feel "stuck" at any point of using the dashboard. Instead, the dashboard should be designed in a way that allows the user to seamlessly click into a tile, drill-down into it, expand the data into a new view, and return back to the home page.
+- Data security: user‑level, row‑level, column‑level
 
-12. What is the order of operations for how things are executed in Tableau?
-The order of operations, also called the query pipeline, is the order in which actions, or operations, are executed in Tableau. As you add filters to your dashboard, they will execute in the order determined by the order of operations. You'll notice that some operations can conflict with each other, leading to unexpected results. 
+- Performance tips: optimize data sources, simplify workbook, reduce complex calcs, use extracts, use filters, incremental refresh
 
-In the Superstore dataset, let's say we're interested in the top 10 customers by sales volume in New York City only. After applying the city and customer filters, we'll get a different list of top customers than what originally returned. That's because both filters are dimension filters so they get executed "at the same time." The idea is to set another filter level, in this case, the context filter, so the filters get applied in the correct order. To do that, right click on the City:New York City filter and select Add to Context. Your problem is now resolved. 
+- ATTR() displays * when multiple values exist
 
-
-13. What are Tableau parameters, sets, and groups?
-Parameters, sets, and groups are features that allow users to "slice and dice" the data in different ways.
-
-Parameters: Parameters are user-defined values that allow users to customize their visualizations by changing values such as filters, calculations, and reference lines. Parameters provide flexibility and interactivity to visualizations by allowing users to dynamically adjust the data being displayed in a visualization. Users can also create parameter actions to further enhance the interactivity of their visualizations.
-Sets: Sets are custom fields that group together similar data points based on a common condition. Sets can be used for filtering and for creating custom calculations based on the members of the set. Sets are created using a logical expression that defines the criteria for inclusion in the set. Once created, sets can be used in calculations, filters, and visualizations.
-Groups: Groups allow users to group data points together based on a specific field. Groups are created by selecting individual values from a field and grouping them together under a single label. Groups are useful for creating hierarchical views of data and for simplifying complex visualizations. Groups can also be used for filtering and for creating custom calculations.
-While all three features allow users to customize their visualizations, their functions and application differ. Parameters provide flexibility and interactivity, sets allow for grouping of similar data points, and groups provide a way to group data points together based on a specific field.
-
-14. What is a calculated field in Tableau?
-A calculated field in Tableau is a field that is created by performing calculations on existing fields in a data source. Calculated fields can be used in the same way as any other field in a Tableau visualization, including being used as dimensions or measures, or for filtering or grouping data.
-
-Let's say we want to return a list of emails for the Superstore sales people. We can easily create a new dimension based on the standard corporate email format. We can use the following calculated field to return the information:
-
-LOWER(LEFT([Person],1)) + '.' + LOWER(RIGHT([Person], LEN([Person]) - (find([Person], ' ', 1)))) + '@superstore.com'
-
-15. What is a dual axis?
-A dual axis in Tableau is a technique used to combine two separate visualizations on a single axis. It allows users to compare two measures or sets of data with different scales or units of measurement.
-
-Start by adding 2 different measures in the same row, either the Rows or the Columns section. Right-click into the second measure and select Dual Axis. You'll now see the measures plotted on the same chart but with two different axes.
-
-16. What are LOD expressions?
-LOD expressions are used to perform aggregations that are more granular than the view's original level of aggregation. There are three types of LOD expressions: FIXED, INCLUDE, and EXCLUDE:
-
-A FIXED LOD computes a value for a fixed level of dimensions, regardless of the view's other dimensions. 
-
-An INCLUDE LOD computes a value for a specified level of dimensions while also including other dimensions in the view. 
-
-Finally, an EXCLUDE LOD computes a value for a specified level of dimensions while excluding other dimensions from the view.
-
-For example, let's say we have a visualization that shows the total sales volume by region by month, but we also want to return the total sales volume by region only without aggregating at the month-level. We can use an LOD to perform the calculation. Create a calculated field and add the formula below:
-
-{FIXED [Region] : SUM([Sales])}
-
-Powered By 
-LOD use case data
-
-17. What are actions?
-In Tableau, actions refer to a set of interactive behaviors that allow users to navigate and interact with data visualizations. There are several types of actions in Tableau, including:
-
-Filter: applies the same filter from one view to another;
-Highlight: marks important information while muting others;
-Go to URL: redirects the user to an external resource, which can include another Tableau workbook, a file, or a web page;
-Go to Sheet: helps navigate between sheets, dashboards, and stories within a Tableau workbook;
-Change Parameter: allows users to dynamically update the visualization by changing the parameter values; and
-Change Set Values: allows users to dynamically update the visualization by selecting a subset of elements to include in the analysis.
-18. How do you restrict access to the data?
-Tableau provides several ways to restrict data access to users, including user-level security, row-level security, and column-level security. Here is a brief overview of each approach:
-
-User-level security: User-level security is used to restrict access to Tableau content based on user login credentials. With user-level security, you can define which users can access specific workbooks, views, and data sources within Tableau.
-Row-level security: Row-level security is used to restrict access to specific rows of data within a dataset based on the user's login credentials.
-Column-level security: Column-level security is used to restrict access to specific columns of data within a dataset based on the user's login credentials.
-By using user-level, row-level, and column-level security, you can ensure that only authorized users have access to specific data within your Tableau environment. This can help you to maintain data privacy, confidentiality, and security.
-
-19. How do you increase the performance of a slow workbook?
-If you are experiencing slow workbook performance in Tableau, there are several strategies you can use to improve performance.
-
-Optimize data sources: One of the main reasons for slow workbook performance in Tableau is a poorly optimized data source. To improve performance, you should ensure that your data source is properly optimized by removing unnecessary joins, filtering out unused fields, and aggregating data at the appropriate level.
-Optimize your workbook: Another way to improve performance is to optimize your workbook by simplifying the layout, removing unused fields and sheets, and minimizing the use of complex calculations and visualizations. You should also consider reducing the number of dashboard elements and filters to improve performance.
-Use data extracts: Data extracts are pre-aggregated subsets of data that can be used to speed up workbook performance. By using data extracts, you can reduce the amount of data that Tableau needs to process, which can improve performance.
-Use filters: Filters can be used to reduce the amount of data that Tableau needs to process, which can improve performance. You can use filters to restrict the data that is displayed in your visualization, or to remove unnecessary data from the view.
-incremental refresh instead of full refresh
-
-other tableau calculations:
-ATTR is for displaying multiple fields as ***
+---
