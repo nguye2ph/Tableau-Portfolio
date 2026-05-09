@@ -21,6 +21,26 @@
 
 - Order of operations: filters follow Tableau’s pipeline; use context filters to control precedence
 
+Extract Filters – Applied when using data extracts to limit data before it’s loaded, improving performance.
+
+Data Source Filters – Applied at the connection level to restrict data before it reaches the worksheet.
+
+Context Filters – Act as a primary filter; subsequent filters only process the subset defined here.
+
+Top N / Conditional Filters & Fixed LOD Calculations – Executed before dimension filters to ensure correct aggregation.
+
+Dimension Filters – Qualitative filters applied to discrete fields (e.g., Category, Region).
+
+Include/Exclude LOD Calculations & Data Blending – Occur after dimension filters but before measure filters.
+
+Measure Filters – Quantitative filters applied to aggregated measures (e.g., SUM(Sales) > 1000).
+
+Forecasts, Table Calculations, Clusters, Totals – Calculations based on the already filtered dataset.
+
+Table Calculation Filters – Filters applied to the results of table calculations.
+
+Trend Lines / Reference Lines – Final visual elements added after all filtering.
+
 - Parameters = user‑defined dynamic inputs  
 - Sets = logical grouping based on conditions  
 - Groups = manual grouping of values
